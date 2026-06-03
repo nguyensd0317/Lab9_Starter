@@ -217,7 +217,7 @@ function loadTrackJS(token) {
     if (window.TrackJS && typeof window.TrackJS.install === "function") {
       window.TrackJS.install({
         token,
-        application: "lab-9-error-calculator",
+        application: "lab9",
         userId: "steven-nguyen"
       });
       window.TrackJS.track("Testing TrackJS from Lab 9");
