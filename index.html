@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lab 9 Error Calculator</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="calculator-panel" aria-labelledby="page-title">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">CSE 110 Lab 9</p>
+            <h1 id="page-title">Error Calculator</h1>
+          </div>
+          <span id="status-pill" class="status-pill">Ready</span>
+        </div>
+
+        <form id="calculator-form" class="calculator-form">
+          <label>
+            First number
+            <input id="first-number" name="first-number" type="number" step="any" value="8">
+          </label>
+
+          <label>
+            Operator
+            <select id="operator" name="operator">
+              <option value="+">+</option>
+              <option value="-">-</option>
+              <option value="*">*</option>
+              <option value="/">/</option>
+            </select>
+          </label>
+
+          <label>
+            Second number
+            <input id="second-number" name="second-number" type="number" step="any" value="2">
+          </label>
+
+          <button class="primary-action" type="submit">Calculate</button>
+        </form>
+
+        <div class="result-strip" aria-live="polite">
+          <span>Result</span>
+          <output id="result-output">10</output>
+        </div>
+      </section>
+
+      <section class="console-panel" aria-labelledby="console-title">
+        <div class="panel-heading compact">
+          <div>
+            <p class="eyebrow">Console API</p>
+            <h2 id="console-title">Testing Buttons</h2>
+          </div>
+        </div>
+
+        <div class="button-grid" id="console-buttons">
+          <button type="button" data-demo="log">Console Log</button>
+          <button type="button" data-demo="error">Console Error</button>
+          <button type="button" data-demo="count">Console Count</button>
+          <button type="button" data-demo="warn">Console Warn</button>
+          <button type="button" data-demo="assert">Console Assert</button>
+          <button type="button" data-demo="clear">Console Clear</button>
+          <button type="button" data-demo="dir">Console Dir</button>
+          <button type="button" data-demo="dirxml">Console dirxml</button>
+          <button type="button" data-demo="groupStart">Console Group Start</button>
+          <button type="button" data-demo="groupEnd">Console Group End</button>
+          <button type="button" data-demo="table">Console Table</button>
+          <button type="button" data-demo="timerStart">Start Timer</button>
+          <button type="button" data-demo="timerEnd">End Timer</button>
+          <button type="button" data-demo="trace">Console Trace</button>
+          <button class="danger-action" type="button" data-demo="globalError">Trigger a Global Error</button>
+        </div>
+      </section>
+
+      <section class="tracking-panel" aria-labelledby="tracking-title">
+        <div>
+          <p class="eyebrow">Monitoring</p>
+          <h2 id="tracking-title">TrackJS Setup</h2>
+        </div>
+        <form id="trackjs-form" class="trackjs-form">
+          <label>
+            TrackJS token
+            <input id="trackjs-token" name="trackjs-token" type="text" autocomplete="off" placeholder="Paste token here">
+          </label>
+          <button type="submit">Enable</button>
+        </form>
+        <p id="trackjs-status" class="muted">Global errors are logged locally. Add a TrackJS token to send them to TrackJS.</p>
+      </section>
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
