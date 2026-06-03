@@ -4,9 +4,7 @@ Static demo for the CSE 110 Lab 9 assignment.
 
 ## Pages URL
 
-Add the GitHub Pages URL here after publishing:
-
-`https://<username>.github.io/<repo-name>/`
+https://nguyensd0317.github.io/Lab9_Starter/
 
 ## What is included
 
