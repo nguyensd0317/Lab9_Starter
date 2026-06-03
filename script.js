@@ -226,7 +226,8 @@ function loadTrackJS(token) {
     console.log("TrackJS agent loaded.");
   };
   script.onerror = () => {
-    trackjsStatus.textContent = "TrackJS could not load. Check the token and network connection.";
+    trackjsStatus.innerHTML = 'TrackJS agent was blocked or could not be downloaded. Open <a href="https://cdn.trackjs.com/agent/v3/latest/t.js" target="_blank" rel="noreferrer">the TrackJS agent URL</a> to test the connection, then try GitHub Pages or disable tracking blockers for this page.';
+    console.error("TrackJS agent failed to load:", script.src);
   };
   document.head.append(script);
 }
