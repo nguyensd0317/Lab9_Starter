@@ -17,9 +17,5 @@ https://nguyensd0317.github.io/Lab9_Starter/
 
 ## TrackJS screenshot
 
-1. Create a TrackJS trial account.
-2. Copy the TrackJS project token into the page's TrackJS token field.
-3. Click **Enable**.
-4. Click **Trigger a Global Error** a few times.
-5. Capture the TrackJS dashboard showing your username and the reported errors.
-6. Save the screenshot in `screenshots/` before submitting.
+- [TrackJS dashboard screenshot](screenshots/trackjs-dashboard.png)
+- [Application console screenshot](screenshots/app-console.png)
