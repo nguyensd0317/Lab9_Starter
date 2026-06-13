@@ -44,7 +44,7 @@ class CalculatorStateError extends CalculatorError {
 const form = document.querySelector("#calculator-form");
 const statusPill = document.querySelector("#status-pill");
 const resultOutput = document.querySelector("#result-output");
-const consoleButtons = document.querySelector("#console-buttons");
+const consoleButtons = document.querySelector("#error-btns");
 const trackjsForm = document.querySelector("#trackjs-form");
 const trackjsTokenInput = document.querySelector("#trackjs-token");
 const trackjsStatus = document.querySelector("#trackjs-status");
@@ -101,8 +101,8 @@ function handleCalculatorSubmit(event) {
   console.time("Calculator try/catch/finally");
 
   try {
-    const first = getNumber("#first-number", "First number");
-    const second = getNumber("#second-number", "Second number");
+    const first = getNumber("#first-num", "First number");
+    const second = getNumber("#second-num", "Second number");
     const operator = document.querySelector("#operator")?.value;
     const result = calculate(first, second, operator);
 

@@ -6,6 +6,14 @@
     <title>Lab 9 Error Calculator</title>
     <link rel="icon" href="data:,">
     <link rel="stylesheet" href="styles.css">
+    <script>
+      window.TrackJSConfig = {
+        token: localStorage.getItem("lab9-trackjs-token") || "YOUR_TRACKJS_TOKEN",
+        application: "lab9",
+        userId: "steven-nguyen"
+      };
+    </script>
+    <script id="trackjs-agent" src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
   </head>
   <body>
     <main class="app-shell">
@@ -21,7 +29,7 @@
         <form id="calculator-form" class="calculator-form">
           <label>
             First number
-            <input id="first-number" name="first-number" type="number" step="any" value="8">
+            <input id="first-num" name="first-num" type="number" step="any" value="8">
           </label>
 
           <label>
@@ -36,10 +44,10 @@
 
           <label>
             Second number
-            <input id="second-number" name="second-number" type="number" step="any" value="2">
+            <input id="second-num" name="second-num" type="number" step="any" value="2">
           </label>
 
-          <button class="primary-action" type="submit">Calculate</button>
+          <button id="calculate" class="primary-action" type="submit">Calculate</button>
         </form>
 
         <div class="result-strip" aria-live="polite">
@@ -56,7 +64,7 @@
           </div>
         </div>
 
-        <div class="button-grid" id="console-buttons">
+        <div class="button-grid" id="error-btns">
           <button type="button" data-demo="log">Console Log</button>
           <button type="button" data-demo="error">Console Error</button>
           <button type="button" data-demo="count">Console Count</button>
